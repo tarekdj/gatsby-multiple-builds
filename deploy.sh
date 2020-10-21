@@ -1,7 +1,9 @@
 #!/bin/sh
 
 if [ "$INCOMING_HOOK_BODY" = "full" ]; then 
-    echo "full build" 
+    echo "Full build"
+    gatsby clean && gatsby build
 else
-    echo "simple build"  
+    echo "Simple build"
+    gatsby build
 fi;
